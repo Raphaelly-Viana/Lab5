@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
+
 // ADD
 router.get("/add/:num1/:num2", (req, res) => {
   const { num1, num2 } = req.params;
@@ -33,5 +34,7 @@ router.get("/divide/:num1/:num2", (req, res) => {
   const result = Number(num1) / Number(num2);
   res.send(`Result: ${result}`);
 });
+
+
 
 module.exports = router;

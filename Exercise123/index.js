@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
 
 app.use('/', Exercise1)
 app.use("/2", Exercise2);
+app.use(express.static("./public"));
 
 // Multiple ports
 const ports = [8080, 5050];
