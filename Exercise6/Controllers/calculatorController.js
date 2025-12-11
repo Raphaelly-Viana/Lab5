@@ -56,7 +56,7 @@ const divide = (req, res) => {
     res.json({ operation: "divide", a: Number(a), b: Number(b), result });
 };
 
-// EXPORTAR TODAS AS FUNÇÕES
+
 module.exports = {
     add,
     subtract,
