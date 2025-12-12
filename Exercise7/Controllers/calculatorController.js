@@ -1,4 +1,4 @@
-const calculator = require("../Library/calculatorController");
+const calculator = require("../Library/calculator");
 const random = require("../Library/random");
 const logger = require("../Library/logger");
 

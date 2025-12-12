@@ -1,0 +1,107 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "My Final Project API",
+    "description": "API for Calculator, Friends, and Fake Store Proxy",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+
+  "tags": [
+    {
+      "name": "Calculator",
+      "description": "Endpoints for calculator operations"
+    },
+    {
+      "name": "Friends",
+      "description": "Endpoints for friends list management"
+    },
+    {
+      "name": "Store",
+      "description": "Proxy endpoints for Fake Store API"
+    }
+  ],
+
+  "paths": {
+    "/calculator/add": {
+      "get": {
+        "tags": ["Calculator"],
+        "summary": "Adds two numbers",
+        "parameters": [
+          {
+            "name": "a",
+            "in": "query",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "name": "b",
+            "in": "query",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Invalid Parameters"
+          }
+        }
+      }
+    },
+
+    "/calculator/subtract": {
+      "get": {
+        "tags": ["Calculator"],
+        "summary": "Subtracts two numbers",
+        "parameters": [
+          { "name": "a", "in": "query", "required": true, "type": "number" },
+          { "name": "b", "in": "query", "required": true, "type": "number" }
+        ],
+        "responses": {
+          "200": { "description": "Success" }
+        }
+      }
+    },
+
+    "/calculator/multiply": {
+      "get": {
+        "tags": ["Calculator"],
+        "summary": "Multiplies two numbers",
+        "parameters": [
+          { "name": "a", "in": "query", "required": true, "type": "number" },
+          { "name": "b", "in": "query", "required": true, "type": "number" }
+        ],
+        "responses": {
+          "200": { "description": "Success" }
+        }
+      }
+    },
+
+    "/calculator/divide": {
+      "get": {
+        "tags": ["Calculator"],
+        "summary": "Divides two numbers",
+        "parameters": [
+          { "name": "a", "in": "query", "required": true, "type": "number" },
+          { "name": "b", "in": "query", "required": true, "type": "number" }
+        ],
+        "responses": {
+          "200": { "description": "Success" },
+          "400": { "description": "Division by zero or invalid parameters" }
+        }
+      }
+    }
+  }
+}
